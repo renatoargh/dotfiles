@@ -1,6 +1,8 @@
 # Environment variables
 export GOPATH=/Users/renatoargh/go
 export GOROOT=/usr/local/go
+export NODE_ENV=development
+export PATH=$PATH:/usr/local/mysql/bin
 
 # Development alias
 alias javacc="java -cp javacc-6.1.2.jar javacc"
@@ -62,6 +64,3 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 # Utilities alias
 alias ip="ifconfig en0 | grep 'inet ' | awk '{print \$2}' | cut -d/ -f1"
 alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile"
-
-# Environment variables
-export PATH=$PATH:/usr/local/mysql/bin

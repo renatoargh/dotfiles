@@ -5,7 +5,7 @@ export NODE_ENV=development
 export PATH=$PATH:/usr/local/mysql/bin
 
 # Development alias
-alias ht="cd /Users/renatoargh/Google Drive/horario-de-trabalho"
+alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho"
 alias javacc="java -cp javacc-6.1.2.jar javacc"
 alias server="clear && echo \"IP: \$(ip)\" && python -m SimpleHTTPServer \$(portdiscovery)"
 alias run="clear && grunt build && NODE_ENV=development node app"

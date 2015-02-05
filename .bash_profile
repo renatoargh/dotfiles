@@ -46,10 +46,12 @@ function mkpw() { head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-8
 function npmim() { /usr/bin/open -a "/Applications/Google Chrome.app" "http://npm.im/$1"; }
 
 # OS alias
+alias hosts="sudo vim /private/etc/hosts"
 alias ll="ls -l -a"
 alias cd..="cd .."
 alias sshprv="ssh -i /Users/renatoargh/Dropbox/servidor1.pem ec2-user@54.232.84.150"
 alias sshvale="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.207.60.100"
+alias sshgammaerp="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.94.240.246"
 
 #recursive listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
@@ -63,5 +65,7 @@ function mcd() {
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'
 
 # Utilities alias
+alias mac="networksetup -listallhardwareports"
+alias eip="dig +short myip.opendns.com @resolver1.opendns.com" #curl ifconfig.me
 alias ip="ifconfig en0 | grep 'inet ' | awk '{print \$2}' | cut -d/ -f1"
 alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile"

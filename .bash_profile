@@ -2,7 +2,8 @@
 export GOPATH=/Users/renatoargh/go
 export GOROOT=/usr/local/go
 export NODE_ENV=development
-export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:/usr/local/mysql-5.6.23-osx10.8-x86_64/bin
+export PATH=$PATH:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src
 
 # Development alias
 alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho"
@@ -69,3 +70,5 @@ alias mac="networksetup -listallhardwareports"
 alias eip="dig +short myip.opendns.com @resolver1.opendns.com" #curl ifconfig.me
 alias ip="ifconfig en0 | grep 'inet ' | awk '{print \$2}' | cut -d/ -f1"
 alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile"
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/usr/local/mysql/bin:/Users/renatoargh/Desenvolvimento/mysql-5.6.23-osx10.9-x86_64/bin:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src:/usr/local/mysql-5.6.23-osx10.8-x86_64/bin:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src:/usr/local/mysql/bin

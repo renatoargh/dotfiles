@@ -6,6 +6,9 @@ export PATH=$PATH:/usr/local/mysql-5.6.23-osx10.8-x86_64/bin
 export PATH=$PATH:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src
 
 # Development alias
+alias ndoe="node"
+alias noe="node"
+alias noed="node"
 alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho"
 alias javacc="java -cp javacc-6.1.2.jar javacc"
 alias server="clear && echo \"IP: \$(ip)\" && python -m SimpleHTTPServer \$(portdiscovery)"
@@ -52,7 +55,8 @@ alias ll="ls -l -a"
 alias cd..="cd .."
 alias sshprv="ssh -i /Users/renatoargh/Dropbox/servidor1.pem ec2-user@54.232.84.150"
 alias sshvale="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.207.60.100"
-alias sshgammaerp="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.94.240.246"
+alias sshgammaerp="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@api.gammaerp.com"
+alias sshgammaerpdb="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.94.172.97"
 
 #recursive listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''

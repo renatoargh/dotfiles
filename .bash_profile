@@ -50,6 +50,8 @@ function mkpw() { head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-8
 function npmim() { /usr/bin/open -a "/Applications/Google Chrome.app" "http://npm.im/$1"; }
 
 # OS alias
+alias ftpon="sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
+alias ftpoff="sudo -s launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 alias hosts="sudo vim /private/etc/hosts"
 alias ll="ls -l -a"
 alias cd..="cd .."

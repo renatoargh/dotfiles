@@ -8,6 +8,7 @@ export PATH=$PATH:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src
 # Development alias
 alias ndoe="node"
 alias noe="node"
+alias nde="node"
 alias noed="node"
 alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho"
 alias javacc="java -cp javacc-6.1.2.jar javacc"

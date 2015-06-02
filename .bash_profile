@@ -33,7 +33,7 @@ alias gc="git add -A && git commit  && git push"
 alias gitreset="git reset --hard"
 alias pid="ps -ef | grep"
 alias pack="cat package.json"
-alias deps="cat package.json | underscore select '.dependencies:only-child' --outfmt text | underscore print --color"
+alias deps="cat package.json | underscore select '.dependencies:only-child' --outfmt text | underscore print --color && du -hs ./node_modules"
 alias ddeps='cat package.json | underscore select '\''.devDependencies:only-child'\'' --outfmt text | underscore print --color'
 alias publish="npm publish"
 function up {
@@ -69,6 +69,16 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
+function timer() {
+    sleep $1;
+    while :; 
+        do
+        echo "TIMER: $1 seconds elapsed!"; 
+        afplay /System/Library/Sounds/Purr.aiff;   
+        sleep 1;
+    done
+}
+
 #which commands you use most
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'
 
@@ -76,6 +86,6 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 alias mac="networksetup -listallhardwareports"
 alias eip="dig +short myip.opendns.com @resolver1.opendns.com" #curl ifconfig.me
 alias ip="ifconfig en0 | grep 'inet ' | awk '{print \$2}' | cut -d/ -f1"
-alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile"
+alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile && cat ~/.bash_profile | pbcopy"
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/usr/local/mysql/bin:/Users/renatoargh/Desenvolvimento/mysql-5.6.23-osx10.9-x86_64/bin:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src:/usr/local/mysql-5.6.23-osx10.8-x86_64/bin:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src:/usr/local/mysql/bin

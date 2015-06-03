@@ -12,8 +12,14 @@ alias nde="node"
 alias noed="node"
 alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho"
 alias javacc="java -cp javacc-6.1.2.jar javacc"
-alias server="clear && echo \"IP: \$(ip)\" && python -m SimpleHTTPServer \$(portdiscovery)"
 alias run="clear && grunt build && NODE_ENV=development node app"
+
+function server {
+    clear;
+    echo "IP: `ip`";
+    python -m SimpleHTTPServer "${1-$(portdiscovery)}"
+}
+
 function build {
     if [ "$1" == "" ] 
     then
@@ -74,7 +80,7 @@ function timer() {
     while :; 
         do
         echo "TIMER: $1 seconds elapsed!"; 
-        afplay /System/Library/Sounds/Purr.aiff;   
+        afplay /System/Library/Sounds/Glass.aiff;   
         sleep 1;
     done
 }

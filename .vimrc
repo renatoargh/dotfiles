@@ -10,3 +10,4 @@ set expandtab
 
 set nobackup
 set noswapfile
+set nowrap

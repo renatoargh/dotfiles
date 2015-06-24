@@ -57,8 +57,7 @@ function mkpw() { head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-8
 function npmim() { /usr/bin/open -a "/Applications/Google Chrome.app" "http://npm.im/$1"; }
 
 # OS alias
-alias ftpon="sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
-alias ftpoff="sudo -s launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
+alias ftpon="clear && sudo /Users/renatoargh/Downloads/proftpd-1.3.5a/proftpd -n"
 alias hosts="sudo vim /private/etc/hosts"
 alias ll="ls -l -a"
 alias cd..="cd .."
@@ -80,7 +79,7 @@ function timer() {
     while :; 
         do
         echo "TIMER: $1 seconds elapsed!"; 
-        afplay /System/Library/Sounds/Glass.aiff;   
+        afplay /System/Library/Sounds/Glass.aiff;
         sleep 1;
     done
 }
@@ -92,6 +91,6 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 alias mac="networksetup -listallhardwareports"
 alias eip="dig +short myip.opendns.com @resolver1.opendns.com" #curl ifconfig.me
 alias ip="ifconfig en0 | grep 'inet ' | awk '{print \$2}' | cut -d/ -f1"
-alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile && cat ~/.bash_profile | pbcopy"
+alias bashprofile="vim ~/.bash_profile && source ~/.bash_profile && cp ~/.bash_profile /Users/renatoargh/Github/dotfiles/.bash_profile"
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/usr/local/mysql/bin:/Users/renatoargh/Desenvolvimento/mysql-5.6.23-osx10.9-x86_64/bin:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src:/usr/local/mysql-5.6.23-osx10.8-x86_64/bin:/Users/renatoargh/Desenvolvimento/redis-2.8.19/src:/usr/local/mysql/bin

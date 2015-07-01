@@ -61,8 +61,6 @@ alias ftpon="clear && sudo /Users/renatoargh/Downloads/proftpd-1.3.5a/proftpd -n
 alias hosts="sudo vim /private/etc/hosts"
 alias ll="ls -l -a"
 alias cd..="cd .."
-alias sshprv="ssh -i /Users/renatoargh/Dropbox/servidor1.pem ec2-user@54.232.84.150"
-alias sshvale="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.207.60.100"
 alias sshgammaerp="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@api.gammaerp.com"
 alias sshgammaerpdb="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.94.172.97"
 

@@ -10,7 +10,7 @@ alias ndoe="node"
 alias noe="node"
 alias nde="node"
 alias noed="node"
-alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho"
+alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho && node app.js"
 alias javacc="java -cp javacc-6.1.2.jar javacc"
 alias run="clear && grunt build && NODE_ENV=development node app"
 

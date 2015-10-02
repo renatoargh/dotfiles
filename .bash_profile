@@ -13,6 +13,7 @@ alias noed="node"
 alias ht="cd /Users/renatoargh/Google\ Drive/horario-de-trabalho && node app.js"
 alias javacc="java -cp javacc-6.1.2.jar javacc"
 alias run="clear && grunt build && NODE_ENV=development node app"
+alias bsize="aws s3api list-objects --bucket $1 --output json --query \"[sum(Contents[].Size), length(Contents[])]\""
 
 function server {
     clear;
@@ -61,8 +62,19 @@ alias ftpon="clear && sudo /Users/renatoargh/Downloads/proftpd-1.3.5a/proftpd -n
 alias hosts="sudo vim /private/etc/hosts"
 alias ll="ls -l -a"
 alias cd..="cd .."
-alias sshgammaerp="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@api.gammaerp.com"
+alias sshgammaerp="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@api.gammaerp.com -o StrictHostKeyChecking=no"
 alias sshgammaerpdb="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@54.94.172.97"
+
+function sshg() {
+    ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem ec2-user@`echo $1`
+}
+
+alias sshprv="ssh -i /Users/renatoargh/Google\ Drive/Amazon\ AWS/gammasoft.pem gammasoft@balanca.pedreirarioverde.com.br"
+alias rmkh="rm ~/.ssh/known_hosts"
+
+function port() {
+    echo `sudo lsof -nP -iTCP:$1 -sTCP:LISTEN`;
+}
 
 #recursive listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
